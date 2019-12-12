@@ -1,0 +1,8 @@
+<p *ngIf="names.length > 2;then thenBlock else elseBlock"></p>
+<ng-template #thenBlock>Content to render when condition is true.</ng-template>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
+
+
+<ol>
+    <li *ngFor="let name of names" (click)="onClick($event)">{{name}}</li>
+</ol>
